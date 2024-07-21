@@ -14,7 +14,7 @@ Ansible to run a Python script on a remote server using environment variables st
 ```sh
 sudo apt update
 sudo apt upgrade
-sudo apt install ansible
+sudo apt install ansible ansible-core
 ```
 
 ### Step 2: Create SSH Key
