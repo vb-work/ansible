@@ -1,0 +1,14 @@
+---
+- name: Run Python script in the background with environment variables
+  hosts: aw_remote_host
+  become: yes
+  vars_files:
+    - vault.yml
+  tasks:
+    - name: Run the Python script
+      shell: |
+        export ADMIN_USERNAME={{ admin_username }}
+        export ADMIN_PASSWORD={{ admin_password }}
+        {{ python_command }}
+      args:
+        executable: /bin/bash
